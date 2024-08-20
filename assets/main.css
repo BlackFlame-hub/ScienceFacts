@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   background-color: #f1efef;
 }
 
@@ -15,46 +15,79 @@ header {
   height: 5em;
   align-items: center;
   justify-content: space-between;
+}
 
-  img {
-    height: auto;
-    width: 300px;
-    align-items: center;
-    margin: 0 0 0 13em;
-    cursor: pointer;
-  }
+header nav {
+  display: flex;
+  align-items: center;
+  margin-right: 14em;
+}
 
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    margin-right: 14.5em;
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-    li {
-      margin-left: 3em;
+header nav ul li {
+  margin-left: 3em;
+}
 
-      &:hover {
-        font-weight: 700;
-      }
+header nav ul li:hover {
+  font-weight: 700;
+}
 
-      a {
-        display: block;
-        text-decoration: none;
-        color: white;
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s ease;
+}
 
-        &:hover {
-          color: black;
-        }
-      }
-    }
-  }
+header nav ul li a:hover {
+  color: black;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  margin-left: 3em;
+}
+
+nav form input[type="text"] {
+  padding: 0.5em;
+  border: 1px solid;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1em;
+}
+
+nav form button[type="submit"] {
+  padding: 0.5em 1em;
+  background-color: white;
+  color: #4b9deb;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav form button[type="submit"]:hover {
+  background-color: #4b9deb;
+  color: white;
+}
+
+.logo {
+  transform: scale(0.7);
+  margin-left: 6.6rem;
+  cursor: pointer;
 }
 
 .hero {
   background-color: white;
-  align-content: center;
-  justify-content: center;
   width: 70vw;
-  height: auto;
   margin: 0.5em 15em 4em 15em;
   padding: 3em;
   border: 1px solid black;
@@ -75,7 +108,7 @@ main {
   }
 
   h4:before {
-    content: "•";
+    content: ">";
     position: absolute;
     left: 4px;
     top: -2px;
@@ -88,7 +121,7 @@ main {
   }
 }
 
-.FAQ {
+.faq {
   border: 1px solid rgba(0, 0, 0, 0.253);
   padding: 1.2em;
   border-radius: 1em;
@@ -106,12 +139,12 @@ main {
     font-size: 0.85rem;
 
     li h4::before {
-      content: none;
+      content: "";
     }
   }
 }
 
-.DYK {
+.dyk {
   border: 1px solid rgba(0, 0, 0, 0.253);
   padding: 1em;
   border-radius: 1em;
