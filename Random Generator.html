@@ -4,14 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Science Facts</title>
-    <link rel="icon" href="assets/Science icon.png" type="image/png" />
-    <link rel="stylesheet" href="assets/normalize.css" />
-    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="icon" href="./assets/Science icon.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
+
+    <script>
+      function generateRandomQuote() {
+        const quotes = [
+          "The only limit to our realization of tomorrow is our doubts of today.",
+          "Do not wait to strike till the iron is hot; but make it hot by striking.",
+          "The best way to predict the future is to create it.",
+          "Success is not how high you have climbed, but how you make a positive difference to the world.",
+          "In the end, we are all just ordinary people. But when you look at the cells that make us, you realize we are extraordinary in every sense of the word.",
+          "The real problem is not whether machines think, but whether men do.",
+          "The good physician treats the disease; the great physician treats the patient who has the disease.",
+          "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.",
+          "The greatness of a nation and its moral progress can be judged by the way its animals are treated.",
+          "We don't inherit the earth from our ancestors, we borrow it from our children.",
+        ];
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[randomIndex];
+
+        // Generate random gradients
+        const boxes = document.getElementsByClassName("gradient-box");
+        for (let i = 0; i < boxes.length; i++) {
+          boxes[i].style.backgroundImage = generateRandomGradient();
+        }
+      }
+
+      function generateRandomGradient() {
+        const gradientTypes = [
+          "linear-gradient",
+          "radial-gradient",
+          "conic-gradient",
+        ];
+        const colors = [
+          "#ff7f50",
+          "#1e90ff",
+          "#32cd32",
+          "#ffa500",
+          "#ff69b4",
+          "#8a2be2",
+          "#dc143c",
+          "bisque",
+          "aqua",
+        ];
+
+        const type =
+          gradientTypes[Math.floor(Math.random() * gradientTypes.length)];
+        const color1 = colors[Math.floor(Math.random() * colors.length)];
+        const color2 = colors[Math.floor(Math.random() * colors.length)];
+        const angle = Math.floor(Math.random() * 360);
+
+        if (type === "linear-gradient") {
+          return `${type}(${angle}deg, ${color1}, ${color2})`;
+        } else {
+          return `${type}(from ${angle}deg at center, ${color1}, ${color2})`;
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper"></div>
     <header>
-      <a href="index.html">
+      <a class="logo" href="index.html">
         <img src="assets/Logo.svg" alt="SVG Logo" />
       </a>
       <nav>
@@ -31,8 +87,33 @@
       </nav>
     </header>
 
-    <main><h4>asfalt</h4></main>
+    <main>
+      <div class="hero-gen">
+        <section id="lbox-quote">
+          <button onclick="generateRandomQuote()">
+            Click to generate a smart rainbow!
+          </button>
+          <div id="quote"></div>
+        </section>
 
-    <footer></footer>
+        <section id="rbox-gradient">
+          <div class="gradient-box"></div>
+          <div class="gradient-box"></div>
+          <div class="gradient-box"></div>
+          <div class="gradient-box"></div>
+          <div class="gradient-box"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy;2024 No rights reserved.</p>
+      <p>
+        Source:
+        <a href="https://byjus.com/chemistry/scientific-facts-we-see-everyday/"
+          >Byjus</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
