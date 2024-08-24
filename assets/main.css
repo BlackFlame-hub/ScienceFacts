@@ -242,14 +242,6 @@ footer {
 
 /* Contact Page ------------------START---------------- */
 
-.hero-contact {
-  background-color: white;
-  width: 76vw;
-  margin: 0.5em 15em 4em 15em;
-  border: 1px solid black;
-  border-radius: 0.3em;
-}
-
 #left-sec,
 #right-sec {
   display: inline-block;
