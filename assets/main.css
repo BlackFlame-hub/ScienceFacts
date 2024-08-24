@@ -185,7 +185,7 @@ footer {
   }
 }
 
-/* Random Generator Page ---------------------------------- */
+/* Random Generator Page ----------------START------------------ */
 
 .hero-gen {
   display: flex;
@@ -238,7 +238,86 @@ footer {
   border-radius: 20px;
 }
 
-/* Random Generator Page ---------------------------------- */
+/* Random Generator Page ------------------END---------------- */
+
+/* Contact Page ------------------START---------------- */
+
+.hero-contact {
+  background-color: white;
+  width: 76vw;
+  margin: 0.5em 15em 4em 15em;
+  border: 1px solid black;
+  border-radius: 0.3em;
+}
+
+#left-sec,
+#right-sec {
+  display: inline-block;
+  width: 30vw;
+}
+
+#left-sec {
+  margin-left: 50px;
+}
+
+#left-sec h2 {
+  margin-bottom: 30px;
+}
+
+#left-sec input,
+textarea {
+  display: block;
+  width: 60%;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  line-height: 15px;
+}
+
+label {
+  text-decoration: underline 2px rgba(137, 43, 226, 0.445);
+}
+
+#left-sec input:hover {
+  background-color: rgb(0, 89, 255);
+  color: white;
+}
+
+#left-sec input:focus {
+  color: rgb(103, 247, 151);
+  background-color: rgb(52, 63, 83);
+}
+
+input::placeholder {
+  color: rgb(170, 124, 71);
+  font-weight: 550;
+}
+
+input:required {
+  border: 1px solid rgba(255, 0, 0, 0.562);
+  background-color: rgba(255, 0, 0, 0.022);
+}
+
+input[type="submit"] {
+  background-color: #4b9eeb94;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#right-sec {
+  text-align: right;
+}
+
+#right-sec :not(div, a) {
+  margin: 10px;
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(255, 228, 196, 0.301);
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+}
+
+/* Contact Page ------------------END---------------- */
 
 @keyframes reveal {
   from {
